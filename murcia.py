@@ -20,10 +20,10 @@ def grafica_murcia():
     plt.grid(True, linestyle="--", alpha=0.5)
 
     # Guardar la imagen junto al .py
-    save_path = Path(_file_).parent / "murcia.png"
+    save_path = Path(__file__).parent / "murcia.png"
     plt.savefig(save_path, bbox_inches="tight")
     plt.close()
     print(f"Gráfica guardada en: {save_path.resolve()}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     grafica_murcia()
